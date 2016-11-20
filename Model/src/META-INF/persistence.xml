@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd" version="2.0">
+  <persistence-unit name="Model">
+    <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+    <jta-data-source>java:/app/jdbc/jdbc/SIBUDS</jta-data-source>
+    <class>Model.Entity.Autor</class>
+    <class>Model.Entity.Categoria</class>
+    <class>Model.Entity.Deuda</class>
+    <class>Model.Entity.Entrega</class>
+    <class>Model.Entity.Obra</class>
+    <class>Model.Entity.Persona</class>
+    <class>Model.Entity.Prestamo</class>
+    <class>Model.Entity.Recurso</class>
+    <class>Model.Entity.Reserva</class>
+    <properties>
+      <property name="eclipselink.target-server" value="WebLogic_10"/>
+      <property name="javax.persistence.jtaDataSource" value="java:/app/jdbc/jdbc/SIBUDS"/>
+    </properties>
+  </persistence-unit>
+</persistence>

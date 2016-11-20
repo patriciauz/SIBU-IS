@@ -1,0 +1,41 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"  xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core" >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Buscar personas</title>
+    </head>
+    <body>
+        <h:form id="form">
+            <h:messages/>
+            <h:panelGrid columns="2">
+                <h:outputText value="Tipo documento:"/>
+                <h:selectOneMenu value="#{sibuBean.paramTipoDocumento}">
+                    <f:selectItem itemLabel="" itemValue=""/>
+                    <f:selectItems value="#{sibuBean.tipoIdentificacionList}"/>
+                </h:selectOneMenu>
+                <h:outputText value="Numero documento:"/>
+                <h:inputText value="#{sibuBean.paramNumeroIdentificacion}"/>
+                <h:commandButton value="Buscar" action="#{sibuBean.findPersonaAction}"/>
+            </h:panelGrid>
+           
+           <h:panelGrid columns="2">
+             <h:outputText value="Numero documento:"/>
+               <h:outputText value="#{sibuBean.persona.identificacionCompleta}"/>
+                <h:outputText value="Nombre completo:"/>
+               <h:outputText value="#{sibuBean.persona.nombreCompleto}"/>
+                <h:outputText value=":"/>
+               <h:outputText value="#{sibuBean.persona.email}"/>
+               <h:outputText value="Rol:"/>
+               <h:outputText value="#{sibuBean.persona.rol}"/>
+               <h:outputText value="Telefono:"/>
+               <h:outputText value="#{sibuBean.persona.telefono}"/>
+               <h:outputText value="Celular:"/>
+               <h:outputText value="#{sibuBean.persona.celular}"/>
+               <h:outputText value="Estado:"/>
+               <h:outputText value="#{sibuBean.persona.estado}"/>
+           </h:panelGrid>
+            <h:commandButton value="Modificar" action="{sibuBean.goUpdPersonaAction}"/>
+        </h:form>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Ingresar personas</title>
+    </head>
+    <body>
+        <h:form>
+       <h:messages />
+            <h:panelGrid columns="4">
+                <h:outputText value="Tipo documento:"/>
+                <h:selectOneMenu value="#{sibuBean.persona.tipoDocumento}" required="true">
+                    <f:selectItem itemLabel="" itemValue=""/>
+                    <f:selectItems value="#{sibuBean.tipoIdentificacionList}"/>
+                </h:selectOneMenu>
+                <h:outputText value="Numero documento:"/>
+                <h:inputText  value="#{sibuBean.persona.identificacion}" required="true"/>
+            </h:panelGrid>
+            <h:panelGrid columns="4">
+                <h:outputText value="Nombre completo:"/>
+                <h:outputText value="#{sibuBean.persona.nombreCompleto}" />
+                <h:outputText value="Segundo nombre:"/>
+                <h:inputText value="#{sibuBean.persona.nombre2}" />
+                <h:outputText value=":"/>
+                <h:inputText value="#{sibuBean.persona.email}" required="true"/>
+                <h:outputText value="Telefono:"/>
+                <h:inputText value="#{sibuBean.persona.telefono}" required="true"/>
+                <h:outputText value="Celular:"/>
+                <h:inputText value="#{sibuBean.persona.celular}" required="true"/>
+                <h:outputText value="Rol:"/>
+                <h:outputText value="#{sibuBean.persona.rol}" />
+                  <h:outputText value="Contraseña:"/>
+                <h:inputSecret value="#{sibuBean.persona.contrasenna}" required="true"/>
+                <h:selectOneMenu value="#{sibuBean.persona.estado}" required="true">
+                    <f:selectItem itemLabel="" itemValue=""/>
+                    <f:selectItems value="#{sibuBean.estadoPersonaList}"/>
+                </h:selectOneMenu>
+            </h:panelGrid>
+            <h:commandButton value="Guardar" action="#{sibuBean.updPersonaAction}"/>
+            
+        </h:form>
+    </body>
+</html>

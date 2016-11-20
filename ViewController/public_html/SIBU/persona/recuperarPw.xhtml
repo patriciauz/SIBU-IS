@@ -1,0 +1,24 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=windows-1252"/>
+        <title>recuperarPw</title>
+    </head>
+    <body>
+    <b>LA NUEVA CONTRASENNA SERA ENVIADA AL CORREO REGISTRADA CON SU USUARIO</b>
+        <h:form>
+            <h:messages/>
+            <h:panelGrid columns="2">
+                <h:outputText value="Tipo documento:"/>
+                <h:selectOneMenu value="#{sibuBean.paramTipoDocumento}">
+                    <f:selectItem itemLabel="" itemValue=""/>
+                    <f:selectItems value="#{sibuBean.tipoIdentificacionList}"/>
+                </h:selectOneMenu>
+                <h:outputText value="Numero documento:"/>
+                <h:inputText value="#{sibuBean.paramNumeroIdentificacion}"/>
+                <h:commandButton value="Buscar" action="#{sibuBean.recuperarContrasennaAction}"/>
+            </h:panelGrid>
+        </h:form>
+        
+    </body>
+</html>

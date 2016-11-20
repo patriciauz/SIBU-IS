@@ -1,0 +1,22 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html">
+    <head>
+       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>index</title>
+    </head>
+    
+        <h:form>
+        <h:messages />
+            <h:panelGrid columns="2">
+               
+                <h:outputText value="Usuario:"/>
+                <h:inputText value="#{sibuBean.paramNumeroIdentificacion}" required="false"/>
+                  <h:outputText value="Contraseña:"/>
+                <h:inputSecret value="#{sibuBean.paramContrasenna}" required="false"/>
+                <h:commandButton value="Ingresar" action="#{sibuBean.goLoginAction}"/>
+                 <h:commandButton value="Nuevo" action="#{sibuBean.pageAddPersonaAction}"/>
+                  <h:commandButton value="Buscar" action="#{sibuBean.goPersonaAction}"/>
+                  <h:commandButton value="Recuperar contraseña" action="#{sibuBean.recuperarPwAction}"/>
+            </h:panelGrid>
+        </h:form>
+    
+</html>

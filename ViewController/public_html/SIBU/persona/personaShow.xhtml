@@ -1,0 +1,27 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:f="http://java.sun.com/jsf/core"
+      >
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <title>Buscar personas</title>
+    </head>
+    <body>
+        <h:form>
+        <h:panelGrid columns="2">
+            <h:messages />
+            <h:outputText value="identificacion"/>
+             <h:outputText value="#{sibuBean.persona.identificacionCompleta}"/>
+             <h:outputText value="Nombre completo:"/>
+             <h:outputText value="#{sibuBean.persona.nombreCompleto}"/>
+              <h:outputText value="Correo electronico"/>
+             <h:outputText value="#{sibuBean.persona.email}"/>
+              <h:outputText value="Telefono:"/>
+             <h:outputText value="#{sibuBean.persona.telefono}"/>
+              <h:outputText value="Celular:"/>
+             <h:outputText value="#{sibuBean.persona.celular}"/>
+              <h:outputText value="Estado:"/>
+             <h:outputText value="#{sibuBean.persona.estado}"/>
+             </h:panelGrid>
+                <h:commandButton value="Buscar" />
+        </h:form>
+    </body>
+</html>
