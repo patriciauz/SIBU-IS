@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ListGenerator {
-    
+    //ejemplo
      public static List<Persona.Rol> getRolList(){
         List<Persona.Rol> list= new ArrayList<>();
         
