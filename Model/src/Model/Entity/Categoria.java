@@ -18,7 +18,7 @@ import services.ObjEntity;
 public class Categoria implements Serializable,ObjEntity {
 
     private static final long serialVersionUID = -7019785360634991462L;
-
+///DE NADA SIRVIO
     public enum Estado {
         ACTIVO,
         INACTIVO
